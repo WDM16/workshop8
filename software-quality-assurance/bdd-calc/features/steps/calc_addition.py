@@ -64,8 +64,11 @@ def step_impl(context):
 @when(u'I provide "{s}" and "{t}" to the calculator program')
 def step_impl(context, s, t): 
     print(u'Step: When I provide "{}" and "{}" to the calculator program '.format(s, t))
-    context.result3 = divide(s, t) 
-    print('Stored result "{}" in the contexting'.format( context.result3 ) )
+    if(t > 0) :
+        context.result3 = divide(s, t) 
+        print('Stored result "{}" in the contexting'.format( context.result3 ) )
+    else:
+        raise Exception(u'Cannot divide by zero.')
 
 @then(u'I get resulting factor "{out}"')
 def step_impl(context, out): 

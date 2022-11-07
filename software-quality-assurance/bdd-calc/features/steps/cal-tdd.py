@@ -10,8 +10,6 @@ class TestCalc(unittest.TestCase):
         self.assertEqual(8, calculator.multiply(4, 2), "Multiply operation for 4*2 is = 8")
     def testDivide(self):
         self.assertEqual(2, calculator.divide(4, 2), "Division operation for 4/2 is = 2")
-    def testDivideByZero(self):
-        self.assertEqual(0, calculator.divide(4, 0), "Subtraction operation for 4/0 is = 0")
 
 
 if __name__ == '__main__': 
